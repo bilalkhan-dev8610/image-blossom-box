@@ -80,10 +80,34 @@ export default {
             height: "0",
           },
         },
+        "glow-pulse": {
+          "0%, 100%": { 
+            boxShadow: "0 0 20px hsl(var(--glow) / 0.3), 0 0 40px hsl(var(--glow) / 0.2)",
+            filter: "brightness(1)"
+          },
+          "50%": { 
+            boxShadow: "0 0 30px hsl(var(--glow) / 0.5), 0 0 60px hsl(var(--glow) / 0.3)",
+            filter: "brightness(1.2)"
+          },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-card": "var(--gradient-card)",
+      },
+      boxShadow: {
+        "glow": "var(--shadow-glow)",
+        "glow-warm": "var(--shadow-glow-warm)",
       },
     },
   },
